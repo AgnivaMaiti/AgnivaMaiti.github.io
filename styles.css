@@ -1,17 +1,14 @@
-/* Reset default margin and padding */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-/* Set default font styles */
 body {
     font-family: 'Noto Sans', 'Calibri', sans-serif;
     color: black;
     text-align: center; /* Center all text */
 }
 
-/* Layout */
 body {
     display: flex;
     flex-flow: row;
@@ -96,14 +93,12 @@ hr {
     }
 
     article img:not([src$=".jpg"]):not([src$=".jpeg"]):not(.opaque) {
-        /* prevent transparent images from showing the black background */
         background-color: white;
         border: 5px solid white;
         box-sizing: border-box;
     }
 }
 
-/* Homepage */
 #intro {
     width: 100%;
     min-height: 100vh;
@@ -119,7 +114,6 @@ hr {
     margin-bottom: 0.2em;
 }
 
-/* Styling for rectangular option boxes */
 .option-boxes {
     display: flex;
     justify-content: center;
@@ -143,9 +137,6 @@ hr {
     font-weight: bold;
 }
 
-/* ... (rest of your CSS code) */
-
-/* Article list */
 .article-list article > header {
     display: flex;
     flex-flow: row;
