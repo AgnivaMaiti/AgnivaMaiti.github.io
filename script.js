@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             projects.textContent = 'প্রকল্প';
             github.textContent = 'গিটহাব';
             linkedin.textContent = 'লিঙ্কডইন';
-            introText.textContent = 'একটি বই ও কফি-প্রেমি মেঘদর্শী, তার কোডিং অভিযানে...';
+            introText.textContent = 'একটি বই ও কফি-প্রেমি মেঘদর্শী, তার কোডিং অভিযানে... ';
         }
     }
 
