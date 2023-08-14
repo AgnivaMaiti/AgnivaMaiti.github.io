@@ -1,10 +1,20 @@
-/* Layout */
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
 
+/* Set default font styles */
 body {
     font-family: 'Noto Sans', 'Calibri', sans-serif;
+    color: black;
+    text-align: center; /* Center all text */
+}
+
+/* Layout */
+body {
     display: flex;
     flex-flow: row;
-    color: black;
 }
 
 body > header {
@@ -94,7 +104,6 @@ hr {
 }
 
 /* Homepage */
-
 #intro {
     width: 100%;
     min-height: 100vh;
@@ -102,7 +111,6 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
 #intro h1 {
@@ -118,7 +126,6 @@ hr {
 }
 
 /* Typography */
-
 article > header {
     margin-bottom: 2em;
 }
@@ -193,7 +200,6 @@ iframe[src*="youtube-nocookie.com"], iframe.video {
 }
 
 /* Article list */
-
 .article-list article > header {
     display: flex;
     flex-flow: row;
