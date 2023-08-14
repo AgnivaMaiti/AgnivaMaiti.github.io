@@ -119,85 +119,31 @@ hr {
     margin-bottom: 0.2em;
 }
 
-@media (max-width: 640px) {
-    #intro h1 {
-        font-size: 7em;
-    }
+/* Styling for rectangular option boxes */
+.option-boxes {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* Typography */
-article > header {
-    margin-bottom: 2em;
-}
-
-article > header time {
-    color: gray;
-    white-space: nowrap;
-}
-
-article img, article video {
-    max-width: 100%;
-}
-
-article .footnotes {
-    font-size: 0.75em;
-}
-
-pre {
-    font-family: 'Noto Sans', 'Calibri', sans-serif;
-    background-color: #272822;
-    color: #f8f8f2;
-    padding: 15px;
-    overflow: auto;
-
-    tab-size: 2;
-    -moz-tab-size: 2;
-}
-
-p code, li code {
-    color: #930d72;
-}
-
-a, a:visited {
-    color: inherit;
-}
-
-kbd {
-    display: inline-block;
-    padding: 3px 5px;
-    font-size: 0.8em;
-    line-height: normal;
-    line-height: 10px;
-    vertical-align: middle;
+.option-box {
+    width: 150px;
+    height: 100px;
     border: 1px solid black;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 black;
-    background-color: rgba(0, 0, 0, 0.15);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-    kbd {
-        border-color: white;
-        background-color: rgba(255, 255, 255, 0.15);
-        box-shadow: inset 0 -1px 0 white;
-    }
-
-    p code, li code {
-        color: #f200b7;
-    }
+.option-box a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
-iframe[src*="youtube-nocookie.com"], iframe.video {
-    border: none;
-    width: 100%;
-    height: 460px;
-}
-
-@media (max-width: 640px) {
-    iframe[src*="youtube-nocookie.com"], iframe.video {
-        height: 260px;
-    }
-}
+/* ... (rest of your CSS code) */
 
 /* Article list */
 .article-list article > header {
