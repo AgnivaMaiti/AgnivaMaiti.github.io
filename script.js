@@ -1,17 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
     const introText = document.getElementById('intro-text');
-    const translateButton = document.getElementById('translate-button');
-    let isTranslated = false;
+    const banglaLink = document.getElementById('translate-bangla');
+    const hindiLink = document.getElementById('translate-hindi');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    let currentLanguage = 'english';
 
-    translateButton.addEventListener('click', function() {
-        if (!isTranslated) {
-            introText.textContent = '¡Bienvenido a mi sitio web! Aquí encontrarás...'; // Update with translated text
-            translateButton.textContent = 'Original'; // Update button text
-            isTranslated = true;
-        } else {
-            introText.textContent = 'Welcome to my website! Here you\'ll find...'; // Original text
-            translateButton.textContent = 'Translate'; // Original button text
-            isTranslated = false;
+    banglaLink.addEventListener('click', function() {
+        introText.textContent = 'আমার ওয়েবসাইটে আপনাকে স্বাগতম! এখানে আপনি...'; // Update with translated text
+        currentLanguage = 'bangla';
+        closeDropdown();
+    });
+
+    hindiLink.addEventListener('click', function() {
+        introText.textContent = 'मेरी वेबसाइट में आपका स्वागत है! यहाँ आपको...'; // Update with translated text
+        currentLanguage = 'hindi';
+        closeDropdown();
+    });
+
+    function closeDropdown() {
+        dropdownContent.classList.remove('show');
+    }
+
+    const dropbtn = document.querySelector('.dropbtn');
+    dropbtn.addEventListener('click', function() {
+        dropdownContent.classList.toggle('show');
+    });
+
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            closeDropdown();
         }
     });
 });
+
