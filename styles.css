@@ -3,12 +3,14 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
+/* Set default font styles */
 body {
     font-family: 'Noto Sans', 'Calibri', sans-serif;
     color: black;
-    text-align: center; 
+    text-align: center; /* Center all text */
 }
 
+/* Center everything */
 body, #main, #intro {
     display: flex;
     flex-direction: column;
@@ -101,9 +103,17 @@ hr {
     }
 }
 
+
+
+/* Style for name header */
+.name-header {
+    font-size: 6em; /* Reduced font size */
+    margin-bottom: 0.3em; /* Added margin to separate from options */
+}
+
 #intro {
     width: 100%;
-    padding: 20px; 
+    padding: 10px 20px; /* Added padding to bring it closer */
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -121,14 +131,14 @@ hr {
 .option-boxes {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px; /* Increased spacing */
 }
 
 .option-box {
-    width: 120px; 
-    height: 70px; 
+    width: 100px; /* Adjusted width */
+    height: 60px; /* Adjusted height */
     border: 1px solid black;
-    margin: 0 5px; 
+    margin: 0 10px; /* Adjusted margin */
     display: flex;
     align-items: center;
     justify-content: center;
