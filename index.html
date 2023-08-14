@@ -1,67 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const introText = document.getElementById('intro-text');
-    const translateLinks = document.querySelectorAll('.dropdown-content a');
-    const dropdownContent = document.querySelector('.dropdown-content');
-    let currentLanguage = 'english';
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="generator" content="Hugo 0.116.1">
+    <meta charset="utf-8">
+    <title>Agniva Maiti</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="Agniva Maiti">
+    <script defer data-domain=""></script>
+</head>
+<body>
+    <main id="intro">
+        <h1 id= "itsname" class="name-header">Agniva Maiti</h1>
+        <div class="option-boxes">
+            <div class="option-box">
+                <a id= "blog" href="#">Blog</a>
+            </div>
+            <div class="option-box">
+                <a id= "about" rel="me" href="#">About</a>
+            </div>
+            <div class="option-box">
+                <a id= "projects" rel="me" href="#">Projects</a>
+            </div>
+            <div class="option-box">
+                <a id= "certificates" rel="me" href="#">Certificates</a>
+            </div>
+            <div class="option-box">
+                <a id= "github" rel="me" href="#">GitHub</a>
+            </div>
+            <div class="option-box">
+                <a id= "linkedin" rel="me" href="#">LinkedIn</a>
+            </div>
+        </div>
 
-    translateLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const selectedLang = e.target.getAttribute('data-lang');
-            currentLanguage = selectedLang;
-            translateText(selectedLang);
-            closeDropdown();
-        });
-    });
-
-    function translateText(language) {
-        if (language === 'english') {
-            itsname.textContent = 'Agniva Maiti';
-            translate.textContent = 'Translate';
-            about.textContent = 'About Me';
-            blog.textContent = 'Blog';
-            certificates.textContent = 'Certificates';
-            projects.textContent = 'Projects';
-            github.textContent = 'GitHub';
-            linkedin.textContent = 'LinkedIn';
-            introText.textContent = 'Book-lover, cloud-gazer, and coffee aficionado on a coding adventure...';
-        }
-        else if (language === 'hindi') {
-            itsname.textContent = 'अग्निभ माईति';
-            translate.textContent = 'अनुवाद';
-            about.textContent = 'मेरे बारे में';
-            blog.textContent = 'ब्लॉग';
-            certificates.textContent = 'प्रमाणपत्र';
-            projects.textContent = 'प्रायोजना';
-            github.textContent = 'गिटहब';
-            linkedin.textContent = 'लिंक्डइन';
-            introText.textContent = 'एक पुस्तक और कॉफी प्रेमी मेघदर्शी, उसके कोडिंग अभियान पर...';
-        }
-
-        else if (language === 'bangla') {
-            itsname.textContent = 'অগ্নিভ মাইতি';
-            translate.textContent = 'অনুবাদ';
-            about.textContent = 'আমার সম্পর্কে';
-            blog.textContent = 'লেখালেখি';
-            certificates.textContent = 'সনদপত্র';
-            projects.textContent = 'প্রকল্প';
-            github.textContent = 'গিটহাব';
-            linkedin.textContent = 'লিঙ্কডইন';
-            introText.textContent = 'একটি বই ও কফি-প্রেমি মেঘদর্শী, তার কোডিং অভিযানে...';
-        }
-    }
-
-    function closeDropdown() {
-        dropdownContent.classList.remove('show');
-    }
-
-    const dropbtn = document.querySelector('.dropbtn');
-    dropbtn.addEventListener('click', function() {
-        dropdownContent.classList.toggle('show');
-    });
-
-    window.addEventListener('click', function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            closeDropdown();
-        }
-    });
-});
+        <div id="intro-text">
+            <p>Welcome to my website! Here you'll find...</p>
+        </div>
+        
+        <div class="dropdown">
+            <button id='translate' class="dropbtn">Translate</button>
+            <div class="dropdown-content">
+                <a href="#" data-lang="english">English</a>
+                <a href="#" data-lang="hindi">हिन्दी</a>
+                <a href="#" data-lang="bangla">বাংলা</a>
+            </div>
+        </div>
+    </main>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
