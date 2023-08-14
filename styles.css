@@ -6,12 +6,14 @@ body, h1, h2, h3, p, ul, li {
 body {
     font-family: 'Noto Sans', 'Calibri', sans-serif;
     color: black;
-    text-align: center; /* Center all text */
+    text-align: center; 
 }
 
-body {
+body, #main, #intro {
     display: flex;
-    flex-flow: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 body > header {
@@ -101,6 +103,8 @@ hr {
 
 #intro {
     width: 100%;
+    padding: 20px; 
+    text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -117,14 +121,14 @@ hr {
 .option-boxes {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .option-box {
-    width: 150px;
-    height: 100px;
+    width: 120px; 
+    height: 70px; 
     border: 1px solid black;
-    margin: 0 10px;
+    margin: 0 5px; 
     display: flex;
     align-items: center;
     justify-content: center;
