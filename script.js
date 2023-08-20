@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
             linkedin.textContent = 'লিঙ্কডইন';
             introText.textContent = 'একটি বই ও কফি-প্রেমি মেঘদর্শী, তার কোডিং অভিযানে... ';
         }
-    }
 
     else if (language === 'spanish') {
     itsname.textContent = 'Agniva Maiti';
@@ -74,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     linkedin.textContent = 'LinkedIn';
     introText.textContent = 'Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación...';
 }
-    else if (language === 'japanese') {
+    else (language === 'japanese') {
     itsname.textContent = 'アグニヴァ・マイティ (Agniva Maiti)';
     translate.textContent = '翻訳';
     about.textContent = '自己紹介';
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     linkedin.textContent = 'リンクイン (LinkedIn)';
     introText.textContent = '本の虫、雲観察家、と コーヒー愛好家 コーディングの冒険中です...';
 }
-
+}
 
 
     function closeDropdown() {
