@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     linkedin.textContent = 'LinkedIn';
     introText.textContent = 'Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación...';
 }
-    else (language === 'japanese') {
+    else if (language === 'japanese') {
     itsname.textContent = 'アグニヴァ・マイティ (Agniva Maiti)';
     translate.textContent = '翻訳';
     about.textContent = '自己紹介';
