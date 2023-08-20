@@ -30,7 +30,6 @@ body > header p {
     color: gray;
 }
 
-/* Main content styles */
 #main {
     flex: auto;
     min-height: 100vh;
@@ -256,24 +255,3 @@ hr {
 .show {
     display: block;
 }
-
-
-body[data-lang="japanese"] {
-    font-family: 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
-}
-
-body[data-lang="spanish"],
-body[data-lang="german"],
-body[data-lang="english"] {
-    font-family: 'Montserrat', 'Arial', sans-serif;
-}
-
-body[data-lang="hindi"] {
-    font-family: 'Noto Sans Devanagari', 'Arial', sans-serif;
-}
-
-body[data-lang="bangla"] {
-    font-family: 'Noto Sans Bengali', 'Arial', sans-serif;
-}
-
-
