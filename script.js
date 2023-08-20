@@ -25,6 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
             linkedin.textContent = 'LinkedIn';
             introText.textContent = 'Book-lover, cloud-gazer, and coffee aficionado on a coding adventure...';
         }
+
+        else if (language === 'german') {
+    itsname.textContent = 'Agniva Maiti';
+    translate.textContent = 'Übersetzen';
+    about.textContent = 'Über mich';
+    blog.textContent = 'Blog';
+    certificates.textContent = 'Zertifikate';
+    projects.textContent = 'Projekte';
+    github.textContent = 'GitHub';
+    linkedin.textContent = 'LinkedIn';
+    introText.textContent = 'Buchliebhaber, Wolkenbetrachter und Kaffee-Aficionado auf einem Coding-Abenteuer...';
+}
+
         else if (language === 'hindi') {
             itsname.textContent = 'अग्निभ माईति';
             translate.textContent = 'अनुवाद';
@@ -49,6 +62,31 @@ document.addEventListener('DOMContentLoaded', function() {
             introText.textContent = 'একটি বই ও কফি-প্রেমি মেঘদর্শী, তার কোডিং অভিযানে... ';
         }
     }
+
+    else if (language === 'spanish') {
+    itsname.textContent = 'Agniva Maiti';
+    translate.textContent = 'Traducir';
+    about.textContent = 'Sobre mí';
+    blog.textContent = 'Blog';
+    certificates.textContent = 'Certificados';
+    projects.textContent = 'Proyectos';
+    github.textContent = 'GitHub';
+    linkedin.textContent = 'LinkedIn';
+    introText.textContent = 'Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación...';
+}
+    else if (language === 'japanese') {
+    itsname.textContent = 'アグニヴァ・マイティ (Agniva Maiti)';
+    translate.textContent = '翻訳';
+    about.textContent = '自己紹介';
+    blog.textContent = 'ブログ';
+    certificates.textContent = '証明書';
+    projects.textContent = 'プロジェクト';
+    github.textContent = 'ギットハブ (GitHub)';
+    linkedin.textContent = 'リンクイン (LinkedIn)';
+    introText.textContent = '本の虫、雲観察家、と コーヒー愛好家 コーディングの冒険中です...';
+}
+
+
 
     function closeDropdown() {
         dropdownContent.classList.remove('show');
