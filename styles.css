@@ -3,7 +3,6 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
-/* Global styles */
 body {
     font-family: 'Noto Sans', 'Calibri', sans-serif;
     color: black;
@@ -17,7 +16,6 @@ body, #main, #intro {
     justify-content: center;
 }
 
-/* Header styles */
 body > header {
     text-align: center;
 }
@@ -260,23 +258,24 @@ hr {
 }
 
 
-[data-lang="japanese"] {
+body[data-lang="japanese"] {
     font-family: 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
 }
 
-[data-lang="spanish"],
-[data-lang="german"],
-[data-lang="english"] {
+body[data-lang="spanish"],
+body[data-lang="german"],
+body[data-lang="english"] {
     font-family: 'Montserrat', 'Arial', sans-serif;
 }
 
-[data-lang="hindi"] {
+body[data-lang="hindi"] {
     font-family: 'Noto Sans Devanagari', 'Arial', sans-serif;
 }
 
-[data-lang="bangla"] {
+body[data-lang="bangla"] {
     font-family: 'Noto Sans Bengali', 'Arial', sans-serif;
 }
+
 
 [data-lang] {
     line-height: 1.5;
