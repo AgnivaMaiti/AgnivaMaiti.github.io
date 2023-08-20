@@ -258,3 +258,30 @@ hr {
 .show {
     display: block;
 }
+
+
+[data-lang="japanese"] {
+    font-family: 'Yu Gothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+}
+
+[data-lang="spanish"],
+[data-lang="german"],
+[data-lang="english"] {
+    font-family: 'Montserrat', 'Arial', sans-serif;
+}
+
+[data-lang="hindi"] {
+    font-family: 'Noto Sans Devanagari', 'Arial', sans-serif;
+}
+
+[data-lang="bangla"] {
+    font-family: 'Noto Sans Bengali', 'Arial', sans-serif;
+}
+
+[data-lang] {
+    line-height: 1.5;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    color: black; 
+}
