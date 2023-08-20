@@ -277,10 +277,3 @@ body[data-lang="bangla"] {
 }
 
 
-[data-lang] {
-    line-height: 1.5;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    color: black; 
-}
