@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
     introText.textContent = 'Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación...';
 }
     else if (language === 'japanese') {
-    itsname.textContent = 'アグニヴァ・マイティ (Agniva Maiti)';
+    itsname.textContent = 'アグニヴァ・マイティ \n (Agniva Maiti)';
     translate.textContent = '翻訳';
     about.textContent = '自己紹介';
     blog.textContent = 'ブログ';
