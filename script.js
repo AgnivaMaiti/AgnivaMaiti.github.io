@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Define variables for elements to be updated
     const itsname = document.getElementById('itsname');
     const translate = document.getElementById('translate');
     const about = document.getElementById('about');
@@ -26,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function translateText(language) {
-        // Update theme first
         updateTheme();
         if (language === 'english') {
             itsname.textContent = 'Agniva Maiti';
@@ -100,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 }
 
+
     function closeDropdown() {
         dropdownContent.classList.remove('show');
     }
@@ -118,14 +117,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     darkModeToggle.addEventListener('click', function () {
         isDarkMode = !isDarkMode;
-        translateText(currentLanguage);
+        updateTheme();
     });
 
     function updateTheme() {
         if (isDarkMode) {
             body.classList.add('dark-mode');
+            dropbtn.classList.add('dark-mode'); // Add this line
         } else {
             body.classList.remove('dark-mode');
+            dropbtn.classList.remove('dark-mode'); // Add this line
         }
     }
 });
