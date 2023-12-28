@@ -1,11 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // Define variables for elements to be updated
+    const itsname = document.getElementById('itsname');
+    const translate = document.getElementById('translate');
+    const about = document.getElementById('about');
+    const blog = document.getElementById('blog');
+    const certificates = document.getElementById('certificates');
+    const projects = document.getElementById('projects');
+    const github = document.getElementById('github');
+    const linkedin = document.getElementById('linkedin');
     const introText = document.getElementById('intro-text');
+    const body = document.body;
+
     const translateLinks = document.querySelectorAll('.dropdown-content a');
     const dropdownContent = document.querySelector('.dropdown-content');
     let currentLanguage = 'english';
+    let isDarkMode = false;
 
     translateLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             const selectedLang = e.target.getAttribute('data-lang');
             currentLanguage = selectedLang;
             translateText(selectedLang);
@@ -92,13 +104,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const dropbtn = document.querySelector('.dropbtn');
-    dropbtn.addEventListener('click', function() {
+    dropbtn.addEventListener('click', function () {
         dropdownContent.classList.toggle('show');
     });
 
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (!event.target.matches('.dropbtn')) {
             closeDropdown();
         }
     });
+
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    darkModeToggle.addEventListener('click', function () {
+        isDarkMode = !isDarkMode;
+        updateTheme();
+    });
+
+    function updateTheme() {
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+    }
 });
