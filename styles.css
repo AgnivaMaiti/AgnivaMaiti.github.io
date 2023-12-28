@@ -255,3 +255,13 @@ hr {
 .show {
     display: block;
 }
+
+.dark-mode {
+    background-color: black;
+    color: #dfdfdf;
+}
+
+.dark-mode .dropbtn {
+    background-color: grey;
+    color: white;
+}
