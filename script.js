@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function translateText(language) {
-        updateTheme();
+    const buttons = [itsname, translate, about, blog, certificates, projects, github, linkedin];        
         if (language === 'english') {
             itsname.textContent = 'Agniva Maiti';
             translate.textContent = 'Translate';
@@ -96,8 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     linkedin.textContent = 'リンクイン (LinkedIn)';
     introText.textContent = '本の虫、雲観察家、と コーヒー愛好家 コーディングの冒険中です...';
 }
-            const buttons = [itsname, translate, about, blog, certificates, projects, github, linkedin];
-    buttons.forEach(button => button.classList.toggle('dark-mode', isDarkMode));
+buttons.forEach(button => button.classList.toggle('dark-mode', isDarkMode));
 
 }
 
