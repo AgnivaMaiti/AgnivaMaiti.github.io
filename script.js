@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const translateLinks = document.querySelectorAll('.dropdown-content a');
     const dropdownContent = document.querySelector('.dropdown-content');
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
     let currentLanguage = 'english';
     let isDarkMode = false;
 
@@ -25,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function translateText(language) {
-        const buttons = [itsname, translate, about, blog, certificates, projects, github, linkedin];
-
         if (language === 'english') {
             itsname.textContent = 'Agniva Maiti';
             translate.textContent = 'Translate';
@@ -37,21 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
             github.textContent = 'GitHub';
             linkedin.textContent = 'LinkedIn';
             introText.textContent = 'Book-lover, cloud-gazer, and coffee aficionado on a coding adventure...';
-        }
-
-        else if (language === 'german') {
-    itsname.textContent = 'Agniva Maiti';
-    translate.textContent = 'Übersetzen';
-    about.textContent = 'Über mich';
-    blog.textContent = 'Blog';
-    certificates.textContent = 'Zertifikate';
-    projects.textContent = 'Projekte';
-    github.textContent = 'GitHub';
-    linkedin.textContent = 'LinkedIn';
-    introText.textContent = 'Buchliebhaber, Wolkenbetrachter und Kaffee-Aficionado auf einem Coding-Abenteuer...';
-}
-
-        else if (language === 'hindi') {
+        } else if (language === 'german') {
+            itsname.textContent = 'Agniva Maiti';
+            translate.textContent = 'Übersetzen';
+            about.textContent = 'Über mich';
+            blog.textContent = 'Blog';
+            certificates.textContent = 'Zertifikate';
+            projects.textContent = 'Projekte';
+            github.textContent = 'GitHub';
+            linkedin.textContent = 'LinkedIn';
+            introText.textContent = 'Buchliebhaber, Wolkenbetrachter und Kaffee-Aficionado auf einem Coding-Abenteuer...';
+        } else if (language === 'hindi') {
             itsname.textContent = 'अग्निभ माईति';
             translate.textContent = 'अनुवाद';
             about.textContent = 'मेरे बारे में';
@@ -61,9 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
             github.textContent = 'गिटहब';
             linkedin.textContent = 'लिंक्डइन';
             introText.textContent = 'एक पुस्तक और कॉफी प्रेमी मेघदर्शी, उसके कोडिंग अभियान पर...';
-        }
-
-        else if (language === 'bangla') {
+        } else if (language === 'bangla') {
             itsname.textContent = 'অগ্নিভ মাইতি';
             translate.textContent = 'অনুবাদ';
             about.textContent = 'আমার সম্পর্কে';
@@ -73,31 +66,28 @@ document.addEventListener('DOMContentLoaded', function () {
             github.textContent = 'গিটহাব';
             linkedin.textContent = 'লিঙ্কডইন';
             introText.textContent = 'একটি বই ও কফি-প্রেমি মেঘদর্শী, তার কোডিং অভিযানে... ';
+        } else if (language === 'spanish') {
+            itsname.textContent = 'Agniva Maiti';
+            translate.textContent = 'Traducir';
+            about.textContent = 'Sobre mí';
+            blog.textContent = 'Blog';
+            certificates.textContent = 'Certificados';
+            projects.textContent = 'Proyectos';
+            github.textContent = 'GitHub';
+            linkedin.textContent = 'LinkedIn';
+            introText.textContent = 'Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación...';
+        } else if (language === 'japanese') {
+            itsname.textContent = 'アグニヴァ・ マイティ';
+            translate.textContent = '翻訳';
+            about.textContent = '自己紹介';
+            blog.textContent = 'ブログ';
+            certificates.textContent = '証明書';
+            projects.textContent = 'プロジェクト';
+            github.textContent = 'ギットハブ (GitHub)';
+            linkedin.textContent = 'リンクイン (LinkedIn)';
+            introText.textContent = '本の虫、雲観察家、と コーヒー愛好家 コーディングの冒険中です...';
         }
-
-    else if (language === 'spanish') {
-    itsname.textContent = 'Agniva Maiti';
-    translate.textContent = 'Traducir';
-    about.textContent = 'Sobre mí';
-    blog.textContent = 'Blog';
-    certificates.textContent = 'Certificados';
-    projects.textContent = 'Proyectos';
-    github.textContent = 'GitHub';
-    linkedin.textContent = 'LinkedIn';
-    introText.textContent = 'Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación...';
-}
-    else if (language === 'japanese') {
-    itsname.textContent = 'アグニヴァ・ マイティ';
-    translate.textContent = '翻訳';
-    about.textContent = '自己紹介';
-    blog.textContent = 'ブログ';
-    certificates.textContent = '証明書';
-    projects.textContent = 'プロジェクト';
-    github.textContent = 'ギットハブ (GitHub)';
-    linkedin.textContent = 'リンクイン (LinkedIn)';
-    introText.textContent = '本の虫、雲観察家、と コーヒー愛好家 コーディングの冒険中です...';
-}
-        buttons.forEach(button => button.classList.toggle('dark-mode', isDarkMode));
+        // Add more languages as needed
     }
 
     function closeDropdown() {
@@ -115,7 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
     darkModeToggle.addEventListener('click', function () {
         isDarkMode = !isDarkMode;
         updateTheme();
