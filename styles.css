@@ -284,3 +284,23 @@ article img:not([src$=".jpg"]):not([src$=".jpeg"]):not(.opaque) {
 .dark-mode .dropbtn:hover {
     background-color: #555;
 }
+
+
+#dark-mode-toggle {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #555;
+}
+
+.dark-mode #dark-mode-toggle {
+    background-color: #333;
+    color: white;
+}
