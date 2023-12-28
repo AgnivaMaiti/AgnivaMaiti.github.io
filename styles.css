@@ -16,6 +16,16 @@ body, #main, #intro {
     justify-content: center;
 }
 
+body, .dropbtn {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode, .dropbtn.dark-mode {
+    background-color: black;
+    color: #dfdfdf;
+}
+
 body > header {
     text-align: center;
 }
@@ -37,7 +47,7 @@ body > header p {
     overflow: hidden;
     display: flex;
     flex-flow: column;
-    padding: 15px; /* Add spacing */
+    padding: 15px; 
 }
 
 #main > nav, #main > main, #main > footer {
@@ -51,14 +61,13 @@ body > header p {
 #main > main {
     flex: 1;
     margin-right: 25px;
-    margin-bottom: 20px; /* Add spacing */
+    margin-bottom: 20px;
 }
 
 #main > footer {
     padding-top: 50px;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 640px) {
     body > header h1 {
         width: auto;
@@ -111,6 +120,11 @@ hr {
 
 .muted {
     color: gray;
+}
+
+.dark-mode .dropbtn {
+    background-color: grey;
+    color: white;
 }
 
 @media (prefers-color-scheme: dark) {
