@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Define variables for elements to be updated
     const itsname = document.getElementById('itsname');
     const translate = document.getElementById('translate');
     const about = document.getElementById('about');
@@ -98,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 }
 
-
     function closeDropdown() {
         dropdownContent.classList.remove('show');
     }
@@ -118,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     darkModeToggle.addEventListener('click', function () {
         isDarkMode = !isDarkMode;
         updateTheme();
+        translateText(currentLanguage); // Update text content after switching theme
     });
 
     function updateTheme() {
