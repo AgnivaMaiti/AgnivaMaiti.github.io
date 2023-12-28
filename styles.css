@@ -7,11 +7,6 @@ body {
     font-family: 'Noto Sans', 'Calibri', sans-serif;
     color: black;
     text-align: center;
-    background-color: white; /* Set default background color */
-}
-
-body.dark-mode {
-    background-color: black; /* Set dark mode background color */
 }
 
 body, #main, #intro {
@@ -21,14 +16,123 @@ body, #main, #intro {
     justify-content: center;
 }
 
+body > header {
+    text-align: center;
+}
+
+body > header h1 {
+    width: 1.5em;
+    font-size: 10em;
+    margin: 0 auto;
+}
+
+body > header p {
+    color: gray;
+}
+
+#main {
+    flex: auto;
+    min-height: 100vh;
+    max-width: 820px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    padding: 15px; /* Add spacing */
+}
+
+#main > nav, #main > main, #main > footer {
+    padding: 15px;
+}
+
+#main > nav {
+    text-align: center;
+}
+
+#main > main {
+    flex: 1;
+    margin-right: 25px;
+    margin-bottom: 20px; /* Add spacing */
+}
+
+#main > footer {
+    padding-top: 50px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 640px) {
+    body > header h1 {
+        width: auto;
+        font-size: 7em;
+    }
+
+    #main {
+        min-height: 0;
+    }
+
+    #main > main {
+        margin-right: 0;
+    }
+
+    .article-list article h3 {
+        font-size: 1.5em;
+        margin: 0.2em;
+    }
+
+    .article-list article small {
+        font-size: 0.8em;
+    }
+
+    .alt-links {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    #top-header {
+        padding: 5px;
+    }
+
+    .dropdown {
+        top: 10px;
+        left: 10px;
+    }
+
+    .dropbtn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+hr {
+    border: none;
+    border-top: 1px solid gray;
+    max-width: 25px;
+    margin: 35px auto;
+}
+
+.muted {
+    color: gray;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: black;
+    color: #dfdfdf;
+}
+
+article img:not([src$=".jpg"]):not([src$=".jpeg"]):not(.opaque) {
+    background-color: white;
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+
 .name-header {
-    font-size: 5em;
-    margin-bottom: 0.3em;
+    font-size: 5em; 
+    margin-bottom: 0.3em; 
 }
 
 #intro {
     width: 100%;
-    padding: 50px 30px;
+    padding: 50px 30px; 
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -38,7 +142,13 @@ body, #main, #intro {
 }
 
 #intro-text {
-    padding: 30px 20px;
+    padding: 30px 20px; 
+}
+
+#intro h1 {
+    font-size: 10em;
+    margin: 10;
+    margin-bottom: 0.2em;
 }
 
 .option-boxes {
@@ -48,10 +158,10 @@ body, #main, #intro {
 }
 
 .option-box {
-    width: 100px;
-    height: 60px;
+    width: 100px; 
+    height: 60px; 
     border: 1px solid black;
-    margin: 0 10px;
+    margin: 0 10px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,11 +172,6 @@ body, #main, #intro {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-/* Add this for dark mode */
-body.dark-mode, .option-box a.dark-mode {
-    color: #dfdfdf;
 }
 
 .article-list article > header {
@@ -131,7 +236,7 @@ body.dark-mode, .option-box a.dark-mode {
     min-width: 160px;
     z-index: 1;
     border-radius: 5px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
@@ -148,72 +253,4 @@ body.dark-mode, .option-box a.dark-mode {
 
 .show {
     display: block;
-}
-
-@media (max-width: 640px) {
-    body > header h1 {
-        width: auto;
-        font-size: 7em;
-    }
-
-    #main {
-        min-height: 0;
-    }
-
-    #main > main {
-        margin-right: 0;
-    }
-
-    .article-list article h3 {
-        font-size: 1.5em;
-        margin: 0.2em;
-    }
-
-    .article-list article small {
-        font-size: 0.8em;
-    }
-
-    .alt-links {
-        margin: 15px 0;
-        text-align: center;
-    }
-
-    #top-header {
-        padding: 5px;
-    }
-
-    .dropdown {
-        top: 10px;
-        left: 10px;
-    }
-
-    .dropbtn {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
-}
-
-
-hr {
-    border: none;
-    border-top: 1px solid gray;
-    max-width: 25px;
-    margin: 35px auto;
-}
-
-.muted {
-    color: gray;
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        background-color: black;
-        color: #dfdfdf;
-    }
-
-    article img:not([src$=".jpg"]):not([src$=".jpeg"]):not(.opaque) {
-        background-color: white;
-        border: 5px solid white;
-        box-sizing: border-box;
-    }
 }
