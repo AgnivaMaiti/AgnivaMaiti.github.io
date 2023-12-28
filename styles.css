@@ -254,3 +254,42 @@ article img:not([src$=".jpg"]):not([src$=".jpeg"]):not(.opaque) {
 .show {
     display: block;
 }
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode #main {
+    border-color: white; /* Add border color for visibility */
+}
+
+.dark-mode .name-header {
+    color: white;
+}
+
+.dark-mode .option-box {
+    border-color: white; /* Add border color for visibility */
+}
+
+.dark-mode .option-box a {
+    color: white;
+}
+
+.dark-mode .dropdown-content {
+    background-color: #333; /* Update dropdown background color */
+}
+
+.dark-mode .dropdown-content a {
+    color: white;
+}
+
+.dark-mode .dropbtn {
+    background-color: #333; /* Update button background color */
+    color: white;
+}
+
+.dark-mode .dropbtn:hover {
+    background-color: #555; /* Update button hover background color */
+}
+
