@@ -254,22 +254,14 @@ article img:not([src$=".jpg"]):not([src$=".jpeg"]):not(.opaque) {
 .show {
     display: block;
 }
-body.dark-mode {
+.dark-mode body {
     background-color: black;
     color: white;
 }
 
-.dark-mode #main {
-    border-color: white; /* Add border color for visibility */
-}
-
-.dark-mode .name-header {
-    color: white;
-}
-
 .dark-mode .option-box {
-    border-color: white; /* Add border color for visibility */
-    color: white; /* Set text color to white */
+    border-color: white;
+    color: white;
 }
 
 .dark-mode .option-box a {
@@ -277,7 +269,7 @@ body.dark-mode {
 }
 
 .dark-mode .dropdown-content {
-    background-color: #333; /* Update dropdown background color */
+    background-color: #333;
 }
 
 .dark-mode .dropdown-content a {
@@ -285,10 +277,10 @@ body.dark-mode {
 }
 
 .dark-mode .dropbtn {
-    background-color: #333; /* Update button background color */
+    background-color: #333;
     color: white;
 }
 
 .dark-mode .dropbtn:hover {
-    background-color: #555; /* Update button hover background color */
+    background-color: #555;
 }
