@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Define variables for elements to be updated
     const itsname = document.getElementById('itsname');
     const translate = document.getElementById('translate');
     const about = document.getElementById('about');
@@ -25,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function translateText(language) {
+        // Update theme first
+        updateTheme();
         if (language === 'english') {
             itsname.textContent = 'Agniva Maiti';
             translate.textContent = 'Translate';
@@ -115,8 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('dark-mode-toggle');
     darkModeToggle.addEventListener('click', function () {
         isDarkMode = !isDarkMode;
-        updateTheme();
-        translateText(currentLanguage); // Update text content after switching theme
+        translateText(currentLanguage);
     });
 
     function updateTheme() {
