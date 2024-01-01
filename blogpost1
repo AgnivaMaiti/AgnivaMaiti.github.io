@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Happy New Year Blog</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+    }
+    .post-content {
+      margin-top: 20px;
+    }
+    .poem {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy New Year Blog</h1>
+
+  <div class="post-content">
+    <p>Happy New Year dear reader! It's the first day of the year and this will be my first post. I have finally been able to figure out the homepage, so now I'll be working on the other pages like this blog which... idk how often I'll update it but let's hope I don't ditch this project like the many others before it.</p>
+
+    <p>So, today I started practicing some problems on leetcode on a my friend, Shake's recommendation. I also started a course on NLP and another on analytical trading. I spent the rest of the day attending a tech meet for Kshitij, wishing around a hundred people or so for New Year's, replying to NGLs on my social handles, and talking to Hershey's about the new bharatiya nyaya sanhita and to Tofu about his college life in SPA and about Nagaland's linguistics.</p>
+
+    <p>It was an okayish day, nothing to celebrate about the start of surely another bad year. Yes, I'm pessimistic like that :')</p>
+
+    <p class="poem">Here's a poem I wrote this evening:</p>
+    
+    <blockquote>
+      <p>In the darkness we met<br>
+      Under the sunlight we slept<br>
+      Yet when you left me, we were strangers<br>
+      Now I wonder if you ever cared<br>
+      And to love, you ever dared<br>
+      But still, I keep you in my prayers<br>
+      And hope you'll remember<br>
+      The day we met...</p>
+    </blockquote>
+  </div>
+
+</body>
+</html>
