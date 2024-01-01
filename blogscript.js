@@ -6,12 +6,15 @@ const blogPosts = [
     content: "Just trying out something new...",
     date: "August 22, 2023"
   },
+  // Add more blog posts as needed
 ];
 
 function displayBlogPosts() {
   blogContainer.innerHTML = "";
 
-  for (const post of blogPosts) {
+  for (let i = 0; i < blogPosts.length; i++) {
+    const post = blogPosts[i];
+
     const postElement = document.createElement("div");
     postElement.classList.add("blog-post");
 
@@ -20,7 +23,10 @@ function displayBlogPosts() {
     titleElement.textContent = post.title;
 
     const linkElement = document.createElement("a");
-    linkElement.href = `blog/${encodeURIComponent(post.title)}.html`; 
+
+    // Set the href based on the post index
+    linkElement.href = i === 0 ? "blogpost1.html" : `blogpost${i + 1}.html`;
+
     linkElement.appendChild(titleElement);
 
     const contentElement = document.createElement("p");
@@ -38,4 +44,5 @@ function displayBlogPosts() {
     blogContainer.appendChild(postElement);
   }
 }
+
 displayBlogPosts();
