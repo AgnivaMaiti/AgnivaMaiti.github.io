@@ -2,11 +2,10 @@ const blogContainer = document.getElementById("blogContainer");
 
 const blogPosts = [
   {
-    title: "Welcome to my blog",
-    content: "Just trying out something new...",
-    date: "August 22, 2023"
+    title: "Happy New Year!!",
+    content: "Happy New Year dear reader! It's the first day...",
+    date: "1st Jan, 2024"
   },
-  // Add more blog posts as needed
 ];
 
 function displayBlogPosts() {
