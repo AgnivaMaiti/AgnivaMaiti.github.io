@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <style>
+    body, h1, h2, h3, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Noto Sans', 'Calibri', sans-serif;
+        color: black;
+        text-align: center;
+        background-color: #f9f9f9;
+        transition: background-color 0.3s;
+    }
+    body.dark-mode {
+        background-color: #111;
+        color: #fff;
+    }
+    body, #main, #intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    body > header {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #333;
+        width: 100%;
+    }
+    body > header h1 {
+        font-size: 3em;
+        margin-bottom: 0.5em;
+        color: white;
+    }
+    .name-header {
+        font-size: 2.5em;
+        margin-bottom: 0.3em;
+    }
+    .option-boxes {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .option-box {
+        width: 120px;
+        height: 50px;
+        border: 1px solid black;
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .option-box a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    .dark-mode-toggle {
+        background-color: #333;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .dark-mode-toggle:hover {
+        background-color: #555;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align: left;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    #intro-paragraph1,
+    #intro-paragraph2 {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="name-header">About Me</h1>
+    <div class="option-boxes">
+      <div class="option-box">
+        <a href="https://agnivamaiti.github.io/">Home</a>
+      </div>
+      <div class="option-box">
+        <a href="#">About Me</a>
+      </div>
+      <div class="option-box">
+        <a href="#">Projects</a>
+      </div>
+      <div class="option-box">
+        <a href="#">Certificates</a>
+      </div>
+      <div class="option-box">
+        <a href="https://github.com/AgnivaMaiti">GitHub</a>
+      </div>
+      <div class="option-box">
+        <a href="https://www.linkedin.com/in/agniva-maiti/">LinkedIn</a>
+      </div>
+      <div class="dropdown">
+        <button id="translate" class="option-box">Translate</button>
+        <div class="dropdown-content">
+          <a data-lang="english">English</a>
+          <a data-lang="spanish">Spanish</a>
+          <a data-lang="german">German</a>
+          <!-- Add more language options as needed -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="main">
+    <div id="intro">
+      <p id="intro-paragraph1">Book-lover, cloud-gazer, and coffee aficionado on a coding adventure. Currently studying Computer Science & Engineering at KIIT-DU, Odisha.</p>
+      <p id="intro-paragraph2">I'm acquainted with HTML, CSS, JavaScript, Python, SQL, C and C++. I'm currently learning Kotlin and Dart so I can develop android apps, as well as the Django framework for webdev. I'm also very much interested in Data Science, NLP and ML. You can check out my GitHub for some of the projects I have worked on: GitHub. I'm a published author of several ebooks and have recently released my new paperback anthology 'When The Periwinkles Wilt'. You can find my books on Amazon and Flipkart. I also run a few tumblr blogs, mostly on language and culture. You can find me there as @bongboyblog @normalweirdoboy @urdumizaaj. I am the host of the podcast 'The Normally Weird', where I mostly talk about random topics, read out stories and poems or invite my friends for fun discussions. I also have a thing for learning languages haha Fluent in: English, Bengali, Hindi and Nagamese. Passable: Urdu and Assamese. Basic: German. Also learning: Spanish, Japanese.</p>
+
+      <button id="dark-mode-toggle" class="dark-mode-toggle">Toggle Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const introParagraph1 = document.getElementById('intro-paragraph1');
+      const introParagraph2 = document.getElementById('intro-paragraph2');
+
+      const translateLinks = document.querySelectorAll('.dropdown-content a');
+      let currentLanguage = 'english';
+      let isDarkMode = false;
+
+      translateLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          const selectedLang = e.target.getAttribute('data-lang');
+          currentLanguage = selectedLang;
+          translateText(selectedLang);
+          closeDropdown();
+        });
+      });
+
+      function translateText(language) {
+        const title = document.querySelector('.name-header');
+        
+        if (language === 'english') {
+          title.textContent = "About Me";
+          introParagraph1.textContent = "Book-lover, cloud-gazer, and coffee aficionado on a coding adventure. Currently studying Computer Science & Engineering at KIIT-DU, Odisha.";
+          introParagraph2.textContent = "I'm acquainted with HTML, CSS, JavaScript, Python, SQL, C and C++. I'm currently learning Kotlin and Dart so I can develop android apps, as well as the Django framework for webdev. I'm also very much interested in Data Science, NLP and ML. You can check out my GitHub for some of the projects I have worked on: GitHub. I'm a published author of several ebooks and have recently released my new paperback anthology 'When The Periwinkles Wilt'. You can find my books on Amazon and Flipkart. I also run a few tumblr blogs, mostly on language and culture. You can find me there as @bongboyblog @normalweirdoboy @urdumizaaj. I am the host of the podcast 'The Normally Weird', where I mostly talk about random topics, read out stories and poems or invite my friends for fun discussions. I also have a thing for learning languages haha Fluent in: English, Bengali, Hindi and Nagamese. Passable: Urdu and Assamese. Basic: German. Also learning: Spanish, Japanese.";
+        } else if (language === 'spanish') {
+          title.textContent = "Acerca de mí";
+          introParagraph1.textContent = "Amante de los libros, observador de nubes y aficionado al café en una aventura de codificación. Actualmente estudiando Ingeniería en Ciencias de la Computación en KIIT-DU, Odisha.";
+          introParagraph2.textContent = "Estoy familiarizado con HTML, CSS, JavaScript, Python, SQL, C y C++. Actualmente estoy aprendiendo Kotlin y Dart para poder desarrollar aplicaciones para Android, así como el marco de trabajo Django para desarrollo web. También me interesa mucho la Ciencia de Datos, NLP y ML. Puedes ver mi GitHub para algunos de los proyectos en los que he trabajado: GitHub. Soy autor publicado de varios libros electrónicos y recientemente he lanzado mi nueva antología en formato de bolsillo 'When The Periwinkles Wilt'. Puedes encontrar mis libros en Amazon y Flipkart. También administro algunos blogs en Tumblr, hauptsächlich zu Sprache und Kultur. Puedes encontrarme allí como @bongboyblog @normalweirdoboy @urdumizaaj. Soy el anfitrión del podcast 'The Normally Weird', donde principalmente hablo sobre temas aleatorios, leo historias y poemas o invito a mis amigos para discusiones divertidas. También tengo una debilidad por aprender idiomas, haha. Fluido en: inglés, bengalí, hindi y nagamese. Aceptable: urdu y asamés. Básico: alemán. También aprendiendo: español, japonés.";
+        } else if (language === 'german') {
+          title.textContent = "Über mich";
+          introParagraph1.textContent = "Bücherliebhaber, Wolkenbeobachter und Kaffeeaficionado auf einem Coding-Abenteuer. Studiere derzeit Informatik und Ingenieurwissenschaften an der KIIT-DU, Odisha. ";
+          introParagraph2.textContent = "Ich bin vertraut mit HTML, CSS, JavaScript, Python, SQL, C und C++. Ich lerne derzeit Kotlin und Dart, um Android-Apps zu entwickeln, sowie das Django-Framework für Webentwicklung. Ich interessiere mich auch sehr für Data Science, NLP und ML. Sie können mein GitHub für einige der Projekte überprüfen, an denen ich gearbeitet habe: GitHub. Ich bin ein veröffentlichter Autor mehrerer E-Books und habe kürzlich meine neue Taschenbuchanthologie 'When The Periwinkles Wilt' veröffentlicht. Sie können meine Bücher auf Amazon und Flipkart finden. Ich betreibe auch einige Tumblr-Blogs, hauptsächlich zu Sprache und Kultur. Sie können mich dort als @bongboyblog @normalweirdoboy @urdumizaaj finden. Ich bin Gastgeber des Podcasts 'The Normally Weird', in dem ich hauptsächlich über zufällige Themen spreche, Geschichten und Gedichte vorlese oder meine Freunde zu unterhaltsamen Diskussionen einlade. Ich habe auch eine Vorliebe dafür, Sprachen zu lernen, haha. Fließend in: Englisch, Bengalisch, Hindi und Nagamese. Passierbar: Urdu und Assamesisch. Grundkenntnisse: Deutsch. Lerne auch: Spanisch, Japanisch.";
+        }
+      }
+
+      function closeDropdown() {
+        const dropdownContent = document.querySelector('.dropdown-content');
+        dropdownContent.classList.remove('show');
+      }
+
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+      darkModeToggle.addEventListener('click', function () {
+        isDarkMode = !isDarkMode;
+        updateTheme();
+      });
+
+      function updateTheme() {
+        if (isDarkMode) {
+          document.body.classList.add('dark-mode');
+        } else {
+          document.body.classList.remove('dark-mode');
+        }
+      }
+    });
+  </script>
+</body>
+</html>
